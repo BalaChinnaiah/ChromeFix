@@ -1,0 +1,542 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.app {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  padding:0;
+  background-color: white;
+  box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.3);
+}
+
+.logo {
+  height: 80px;
+  margin-right: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.header .nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.header .nav ul li a {
+  text-decoration: none;
+  color: #000;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.header .nav ul li a:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+.header .nav ul li:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #007BFF;
+  position: absolute;
+  bottom: -5px; /* Adjust as needed to place the underline correctly */
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+/* DropDown CSS  */
+
+.header .nav ul li .dropdown {
+  display: none;
+  position: absolute;
+  flex-direction: column; /* Arrange dropdown items vertically */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 5px; /* Space between list item and dropdown */
+}
+
+.header .nav ul li:hover .dropdown {
+  display: flex; /* Show dropdown on hover */
+}
+
+.header .nav ul li .dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header .nav ul li .dropdown ul li {
+  padding: 10px 20px;
+}
+
+.header .nav ul li .dropdown ul li a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.highlight {
+  background-color: #fee;
+  color: #ff6347;
+  padding: 0 5px;
+}
+
+.download-btn {
+  background-color: #4285f4;
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.helpText
+{
+
+  margin-left: 450px;
+  margin-top: 30px;
+  margin-bottom: 20px
+}
+
+
+.terms {
+  margin-top: 20px;
+  color: #555;
+}
+
+.terms a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.chrome-image {
+  width: 40%;
+  height: 40%;
+  margin-top: 20px;
+}
+
+/* SLIDER CSS  */
+
+.carousel {
+  
+  width: 100%;
+  position: relative; 
+}
+
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 17px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: rgba(182, 208, 226, 0.8);
+}
+
+.carousel-button i {
+  transition: color 0.3s;
+}
+
+.carousel-button:hover i {
+  color: blue; /* Change to your desired hover color */
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  height: calc(80vh - 50px); /* Adjust height to make space for buttons */
+  scroll-behavior: smooth;
+}
+
+.slide {
+  min-width: 80vw;
+  height: 80vh;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.slide img, .slide video {
+  width: 60%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slider1
+{
+  display: flex;
+  margin-bottom: 30px;
+  gap: 500px;
+}
+
+.slider1main
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.slider1main video
+{
+ 
+  width: 100%;
+  height: 300px;
+}
+
+.slider2
+{
+  display: flex;
+  gap: 650px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  font-weight: 500; 
+}
+
+.slider2main
+{
+  display: flex;
+  flex-direction: column;
+  background-color: lightgoldenrodyellow;
+}
+.slider2main img 
+{
+  width: 100%;
+  height: cover;
+  margin-bottom: -100px;
+}
+
+.slider3main
+{
+  background-color: darkgreen;
+}
+
+.slider3main img 
+{
+  width: 60%;
+  height: 100%;
+  margin-top: 30px;
+  float: right;
+  
+
+}
+
+.slider3
+{
+  display: flex;
+  color: white;
+  flex-direction: column;
+  gap: 30px;
+  font-weight: 500;
+  margin-right: 250px;
+  margin-left: 70px;
+}
+
+.slider4main
+{
+  background-color: lightblue;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider4
+{
+  display: flex;
+  font-weight: 500; 
+  margin-top: 30px;
+  gap: 300px;
+  margin-left: -350px;
+  
+}
+
+.slider4main img
+{
+  width: 60%;
+  height: 100%;
+  margin-top: 30px;
+  float: left;
+  margin-left: -610px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+
+
+/* Heading Animation  */
+
+.heading {
+  opacity: 0;
+  transform: translateY(100px); /* Initially off the screen */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.heading.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's on top */
+}
+/* Text Animation CSS  */
+
+.text-animation-container {
+  position: relative;
+  overflow: hidden; /* Hide text that's not visible */
+  height: 80px; /* Adjust based on text height */
+  width: 100%; /* Full width */
+  text-align: center; /* Center text horizontally */
+  padding: 20px; /* Padding inside the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for a nicer effect */
+  margin: 20px auto; /* Center the container with some margin */
+  max-width: 600px; /* Optional: limit the max width */
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.text-item {
+  position: absolute;
+  width: 100%;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.text-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-item p {
+  margin: 0; /* Remove default margin */
+  font-size: 1.2rem; /* Adjust text size */
+  font-weight: bold; /* Make text bold */
+}
+
+.text-item p {
+  margin: 0; /* Remove default margin */
+  font-size: 2.5rem; /* Adjust text size to be larger */
+  font-weight: bold; /* Make text bold */
+}
+
+
+.fastHeading
+{
+  background-color: lightgreen;
+  color: darkgreen;
+  padding: 10px 30px;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+h1
+{
+  font-size: 3.2rem;
+}
+
+
+.main {
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  
+}
+
+.mainTitle
+{
+  font-size: 4.7rem;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+.slider1mob
+{
+  display: none;
+}
+
+.slider2mob
+{
+  display: none;
+}
+
+.slider3mob
+{
+  display: none;
+}
+
+.slider4mob
+{
+  display: none;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+  }
+
+  .nav.nav-open {
+    display: block;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li {
+    margin: 20px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .carousel
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-controls
+  {
+    display: none;
+  }
+
+  .slider
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide 
+  {
+    height: 300px;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .slider1
+  {
+    display: none;
+  }
+
+  .slider2
+  {
+    display: none;
+  }
+
+  .slider3
+  {
+    display: none;
+  }
+
+  .sldier4 
+  {
+    display: none;
+  }
+
+  .slider1mob
+  {
+    display: block;
+  }
+
+  .slider2mob 
+  {
+    display: block;
+  }
+
+  .slider3
+  {
+    display: block;
+  }
+
+  .sldier4
+  {
+    display: block;
+  }
+
+}
+
+
